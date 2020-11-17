@@ -142,16 +142,16 @@ bool Menu::isStopIndicator(int menuChoice)
 int Menu::getUserNumItemsChoice(int choiceIndex)
 {
 	int maxItems = this->store.getIthStockItem(choiceIndex).getNumItems();
+	std::string choiceName = this->store.getIthStockItem(choiceIndex).getName();
+
 	std::cout << "How many " << this->store.getIthStockItem(choiceIndex).getName() << " items would you like? ";
 	int numberOfItems = getIntInput();
-
-	std::cout << std::endl;
 
 	while (!(numberOfItems <= maxItems && numberOfItems >= 1))
 	{
 		if (numberOfItems < 1)
 		{
-			std::cout << "Invalid input - must request 1 or more items" << std::endl;
+			std::cout << "Invalid input - must request 1 or more " << choiceName << " items." << std::endl;
 		}
 		else
 		{
@@ -162,6 +162,8 @@ int Menu::getUserNumItemsChoice(int choiceIndex)
 
 		numberOfItems = getIntInput();
 	}
+
+	std::cout << std::endl;
 
 	return numberOfItems;
 }
