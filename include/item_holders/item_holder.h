@@ -9,7 +9,6 @@ class ItemHolder
 {
 	// PRIVATE INSTANCE VARIABLES
 
-	std::string name;
 	std::vector<StockItem> itemsHeld;
 
 	/// <summary>
@@ -57,19 +56,11 @@ public:
 	ItemHolder();
 
 	/// <summary>
-	/// Parameterized constructor; creates an ItemHolder object with a specified name and list of items held.
+	/// Parameterized constructor; creates an ItemHolder object with a specified list of items held.
 	/// </summary>
 	/// 
-	/// <param name="name">The name of the ItemHolder object.</param>
 	/// <param name="items">The initial list of items held by the ItemHolder object.</param>
-	ItemHolder(std::string name, std::vector<StockItem> items);
-
-	/// <summary>
-	/// Parameterized constructor; creates an ItemHolder object with a specified name.
-	/// </summary>
-	/// 
-	/// <param name="name">The name of the ItemHolder object.</param>
-	ItemHolder(std::string name);
+	ItemHolder(std::vector<StockItem> items);
 
 	/// <summary>
 	/// Returns an integer corresponding to the number of items held.
@@ -77,13 +68,6 @@ public:
 	/// 
 	/// <returns>A number representing the number of items held.</returns>
 	int getNumItems();
-
-	/// <summary>
-	/// Returns the name of the ItemHolder object.
-	/// </summary>
-	/// 
-	/// <returns>The name of the ItemHolder object.</returns>
-	std::string getName();
 
 	/// <summary>
 	/// Returns the total price of the items held.

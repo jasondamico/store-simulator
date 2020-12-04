@@ -4,28 +4,17 @@
 
 ItemHolder::ItemHolder()
 {
-	this->name = "Default";
+	
 }
 
-ItemHolder::ItemHolder(std::string name, std::vector<StockItem> items)
+ItemHolder::ItemHolder(std::vector<StockItem> items) 
 {
-	this->name = name;
 	this->itemsHeld = items;
-}
-
-ItemHolder::ItemHolder(std::string name)
-{
-	this->name = name;
 }
 
 int ItemHolder::getNumItems()
 {
 	return this->itemsHeld.size();
-}
-
-std::string ItemHolder::getName()
-{
-	return this->name;
 }
 
 StockItem ItemHolder::getIthStockItem(int index)
@@ -48,7 +37,7 @@ void ItemHolder::removeItems(StockItem itemToRemove)
 	}
 	else
 	{
-		std::cout << "ERROR - This item is not in stock at " << this->name << "." << std::endl;
+		std::cout << "ERROR - This item is not in stock." << std::endl;
 	}
 }
 

@@ -1,9 +1,9 @@
 #ifndef _STORE
 #define _STORE
 
-#include "item_holders/item_holder.h"
+#include "item_holders/named_item_holder.h"
 
-class Store : public ItemHolder
+class Store : public NamedItemHolder
 {
 public:
 	/// <summary>

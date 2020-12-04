@@ -1,21 +1,21 @@
 #include "item_holders/customer.h"
 
-Customer::Customer() : ItemHolder()
+Customer::Customer() : NamedItemHolder()
 {
 	this->budget = 0;
 }
 
-Customer::Customer(std::string customerName, std::vector<StockItem> cartItems, int budget) : ItemHolder(customerName, cartItems)
+Customer::Customer(std::string customerName, std::vector<StockItem> cartItems, int budget) : NamedItemHolder(customerName, cartItems)
 {
 	this->budget = budget;
 }
 
-Customer::Customer(std::string customerName) : ItemHolder(customerName)
+Customer::Customer(std::string customerName) : NamedItemHolder(customerName)
 {
 	this->budget = 0;
 }
 
-Customer::Customer(std::string customerName, int budget) : ItemHolder(customerName)
+Customer::Customer(std::string customerName, int budget) : NamedItemHolder(customerName)
 {
 	this->budget = budget;
 }
