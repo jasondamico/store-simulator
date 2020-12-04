@@ -2,13 +2,14 @@
 #define _CUSTOMER
 
 #include "item_holders/named_item_holder.h"
+#include "item_holders/item_holder.h"
 
 class Customer : public NamedItemHolder
 {
 	// PRIVATE INSTANCE VARIABLES 
 
 	int budget;
-	std::vector<StockItem> purchasedItems;
+	ItemHolder purchasedItems;
 
 public:
 	/// <summary>

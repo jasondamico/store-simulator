@@ -34,13 +34,13 @@ void Customer::addPurchasedItems(std::vector<StockItem> items)
 {
 	for (int i = 0; i < items.size(); i++)
 	{
-		this->purchasedItems.push_back(items[i]);
+		this->purchasedItems.addItems(items[i]);
 	}
 }
 
 void Customer::addPurchasedItem(StockItem item)
 {
-	this->purchasedItems.push_back(item);
+	this->purchasedItems.addItems(item);
 }
 
 void Customer::transferPurchasedItems()
@@ -72,10 +72,10 @@ bool Customer::hasPurchasedItems()
 
 int Customer::getNumPurchasedItems()
 {
-	return this->purchasedItems.size();
+	return this->purchasedItems.getNumItems();
 }
 
 StockItem Customer::getIthPurchasedItem(int index)
 {
-	return this->purchasedItems[index];
+	return this->purchasedItems.getIthStockItem(index);
 }
